@@ -83,4 +83,3 @@ production:
   database: mario199_rails
   username: mario199_rails
   password: <%= ENV['TEST_LINUXPL_DATABASE_PASSWORD'] %>
-  url: 85.17.23.18:5432
