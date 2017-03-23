@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: test_linuxpl_production
-  username: test_linuxpl
+  database: mario199_rails
+  username: mario199_rails
   password: <%= ENV['TEST_LINUXPL_DATABASE_PASSWORD'] %>
