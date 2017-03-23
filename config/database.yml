@@ -84,4 +84,4 @@ production:
   username: mario199_rails
   password: <%= ENV['TEST_LINUXPL_DATABASE_PASSWORD'] %>
   port: 5432
-  host: 85.17.23.18
+  host: 127.0.0.1
