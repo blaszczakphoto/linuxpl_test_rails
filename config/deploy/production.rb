@@ -18,8 +18,10 @@
 # Don't use `:all`, it's a meta role.
 
 role :app, %w{mario199@blaszczakphoto.com}, port: 59184
-set :rvm_custom_path, '/usr/local/rvm'
-set :rvm_ruby_version, "2.4.0@app1"
+set :rvm1_ruby_version, "2.4.0@app1"
+fetch(:default_env).merge!( rvm_path: "/usr/local/rvm" )
+# set :rvm_custom_path, '/usr/local/rvm'
+# set :rvm_ruby_version, "2.4.0@app1"
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
