@@ -32,3 +32,5 @@ set :assets_roles, [:app]
 
 # Default value for keep_releases is 5
 set :keep_releases, 2
+
+set :default_shell, "/bin/bash --login"
