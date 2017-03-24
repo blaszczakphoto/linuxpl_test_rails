@@ -19,6 +19,7 @@ set :deploy_to, "/home/mario199/domains/rails.mario199.linuxpl.info/public_html"
 
 # Default value for :pty is false
 # set :pty, true
+set :assets_roles, [:app]
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
@@ -30,4 +31,4 @@ set :deploy_to, "/home/mario199/domains/rails.mario199.linuxpl.info/public_html"
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 2
