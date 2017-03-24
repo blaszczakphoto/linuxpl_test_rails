@@ -5,16 +5,27 @@ task :restart_server do
       if path_to_pid == ''
         puts 'No server running'
         within('current') do
-          execute('ruby bin/rails server webrick -e production -p 3010 -d')
+          puts capture(:pwd)
+          puts capture(:ls, '-a')
+          execute('source /home/mario199/.bashrc')
+          puts capture('echo $RAILS_SERVE_STATIC_FILES')
+          execute(:bundle, :exec, :ruby, 'bin/rails server webrick -e production -p 3010 -d')
         end
       else
         puts 'Found server running PID file'
         puts path_to_pid
+        pid = capture("cat #{path_to_pid}")
+        puts pid
+        pid_exists = capture("ps aux | awk '{print $2}'")
+        puts pid_exists
+        execute(:kill, pid) if pid_exists.include?(pid)
+        execute(:rm, "-rf #{path_to_pid}")
+        execute('source /home/mario199/.bashrc')
+        puts capture('echo $RAILS_SERVE_STATIC_FILES')
+        within('current') do
+          execute(:bundle, :exec, :ruby, 'bin/rails server webrick -e production -p 3010 -d')
+        end
       end
-      # output = capture('ps aux | grep rails | grep 3010')
-      # puts output
     end
   end
 end
-
-before :restart_server, 'rvm:hook'
