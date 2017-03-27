@@ -34,3 +34,5 @@ set :assets_roles, [:app]
 set :keep_releases, 2
 
 set :default_shell, "/bin/bash --login"
+
+after "deploy:log_revision", :restart_server
