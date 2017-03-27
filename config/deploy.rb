@@ -35,4 +35,4 @@ set :keep_releases, 2
 
 set :default_shell, "/bin/bash --login"
 
-after "deploy:log_revision", :restart_server
+after "deploy:log_revision", "deploy:restart_server"
