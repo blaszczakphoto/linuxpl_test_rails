@@ -20,6 +20,7 @@
 role :app, %w{mario199@blaszczakphoto.com}, port: 59184
 # set :rvm1_ruby_version, "2.4.0@app1"
 # fetch(:default_env).merge!( rvm_path: "/opt/rvm" )
+set :web_server_port, '3010'
 set :rvm_custom_path, '/usr/local/rvm'
 set :rvm_ruby_version, "2.4.0@app1"
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
