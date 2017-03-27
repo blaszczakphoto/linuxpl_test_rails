@@ -7,7 +7,7 @@ task :restart_server do
         within('current') do
           puts capture(:pwd)
           puts capture(:ls, '-a')
-          execute('source /home/mario199/.bashrc')
+          # execute('source /home/mario199/.bashrc')
           puts capture('echo $RAILS_SERVE_STATIC_FILES')
           execute(:bundle, :exec, :ruby, 'bin/rails server webrick -e production -p 3010 -d')
         end
@@ -20,7 +20,7 @@ task :restart_server do
         puts pid_exists
         execute(:kill, pid) if pid_exists.include?(pid)
         execute(:rm, "-rf #{path_to_pid}")
-        execute('source /home/mario199/.bashrc')
+        # execute('source /home/mario199/.bashrc')
         puts capture('echo $RAILS_SERVE_STATIC_FILES')
         within('current') do
           execute(:bundle, :exec, :ruby, 'bin/rails server webrick -e production -p 3010 -d')
