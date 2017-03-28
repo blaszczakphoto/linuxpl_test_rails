@@ -8,7 +8,7 @@ set :repo_url, "https://github.com/blaszczakphoto/linuxpl_test_rails.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/mario199/domains/rails.mario199.linuxpl.info/public_html"
+set :deploy_to, "/home/gm17dhvh/domains/rails.gm17dhvh.ayz.pl/public_html"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
