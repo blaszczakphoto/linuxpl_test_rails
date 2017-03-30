@@ -5,10 +5,10 @@ set :application, "linuxpl_test_rails"
 set :repo_url, "https://github.com/blaszczakphoto/linuxpl_test_rails.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, :production
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/gm17dhvh/domains/rails.gm17dhvh.ayz.pl/public_html"
+set :deploy_to, "/home/mariusz/domains/mario199rails.ml"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -35,4 +35,4 @@ set :keep_releases, 2
 
 set :default_shell, "/bin/bash --login"
 
-after "deploy:log_revision", "deploy:restart_server"
+# after "deploy:log_revision", "deploy:restart_server"
