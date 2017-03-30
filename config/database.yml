@@ -53,4 +53,4 @@ production:
   database: m1210_test
   username: m1210_test
   password: 7mtmwCFl
-  host: %.devil
+  host: localhost
