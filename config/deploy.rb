@@ -5,7 +5,7 @@ set :application, "linuxpl_test_rails"
 set :repo_url, "https://github.com/blaszczakphoto/linuxpl_test_rails.git"
 
 # Default branch is :master
-ask :branch, 'production'
+set :branch, 'production'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/mariusz/domains/mario199rails.ml"
