@@ -8,7 +8,7 @@ const HelloWorld = ({ name, updateName }) => (
     <hr />
     <form >
       <label htmlFor="name">
-        Say hello to:
+        Say hello to?:
       </label>
       <input
         id="name"
