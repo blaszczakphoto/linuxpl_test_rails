@@ -17,7 +17,7 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{mariusz@62.181.9.103}
+role :app, %w{deploy@81.2.243.197}
 # role :app, %w{gm17dhvh@gm17dhvh.ayz.pl}, port: 59184
 # set :rvm1_ruby_version, "2.4.0@app1"
 # fetch(:default_env).merge!( rvm_path: "/opt/rvm" )
