@@ -22,10 +22,10 @@ set :deploy_to, "/home/deploy/domains/mario199rails.ml"
 set :assets_roles, [:app]
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -37,3 +37,5 @@ set :default_shell, "/bin/bash --login"
 
 set :passenger_restart_with_touch, true
 # after "deploy:log_revision", "deploy:restart_server"
+
+
