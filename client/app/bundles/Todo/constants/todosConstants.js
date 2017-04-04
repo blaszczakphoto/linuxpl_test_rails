@@ -1,2 +1,3 @@
 
 export const TODOS_ADD_TODO = 'TODOS_ADD_TODO';
+export const TODOS_TOGGLE_TODO = 'TODOS_TOGGLE_TODO';

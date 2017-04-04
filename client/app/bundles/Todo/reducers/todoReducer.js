@@ -12,6 +12,16 @@ const todos = (state = [], action) => {
           completed: action.completed,
         },
       ]
+    case constants.TODOS_TOGGLE_TODO:
+      return state.map(t => {
+        if (t.id !== action.id) {
+          return t;
+        }
+        return {
+          ...t,
+          completed: !t.completed,
+        }
+      })
     default:
       return state;
   }

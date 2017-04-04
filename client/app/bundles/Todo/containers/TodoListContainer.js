@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
-import Todos from '../components/Todos';
+import TodoList from '../components/TodoList';
 import * as actions from '../actions/todosActionCreators';
 
 const mapStateToProps = (state) => ({
   todos: state.todos,
 });
+
 const mapDispatchToProps = (dispatch) => ({
-  onClick: (text) => {
-    dispatch(actions.addTodo(text));
-  }
-})
-export default connect(mapStateToProps, mapDispatchToProps)(Todos);
+  onClick (id) {
+    dispatch(actions.toggleTodo(id));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

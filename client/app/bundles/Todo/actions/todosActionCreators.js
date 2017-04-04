@@ -6,4 +6,9 @@ export const addTodo = (text) => ({
   id: v4(),
   completed: false,
   text,
+});
+
+export const toggleTodo = (id) => ({
+  type: constants.TODOS_TOGGLE_TODO,
+  id
 })

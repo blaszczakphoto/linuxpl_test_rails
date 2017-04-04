@@ -8,8 +8,23 @@ if (process.env.NODE_ENV === `development`) {
   middlewares.push(logger);
 }
 
+const preloadedState = {
+  todos: [
+    {
+      id: "1",
+      completed: true,
+      text: "Zrobić kupe!",
+    },
+    {
+      id: "2",
+      completed: false,
+      text: "Zjeść śniadanie!",
+    }
+  ]
+}
+
 const configureStore = (railsProps) => (
-  createStore(todoReducer, applyMiddleware(...middlewares))
+  createStore(todoReducer,preloadedState, applyMiddleware(...middlewares))
 );
 
 export default configureStore;
