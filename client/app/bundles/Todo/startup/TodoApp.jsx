@@ -1,11 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { Route, BrowserRouter } from 'react-router-dom';
 import TodosContainer from '../containers/TodosContainer';
 import configureStore from '../store/todoStore';
-import { Provider } from 'react-redux'; 
 
-const TodoApp = (props, _railsContext) => (
+const TodoApp = props => (
   <Provider store={configureStore(props)}>
-    <TodosContainer />
+    <BrowserRouter>
+      <div>
+        <Route exact path="/" component={TodosContainer} />
+        <Route path="/:filter" component={TodosContainer} />
+      </div>
+    </BrowserRouter>
   </Provider>
 );
 

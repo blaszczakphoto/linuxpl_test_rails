@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'hello_world', to: 'hello_world#index'
 
-  get 'todos', to: 'todos#index'
+  get '/:filter', to: 'todos#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'home#index'
+  root to: 'todos#index'
 end
