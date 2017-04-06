@@ -37,7 +37,7 @@ module Api::V1
 
     def todo_params
       # whitelist params
-      params.permit(:text, :created_by)
+      params.permit(:text , :id, :completed)
     end
 
     def set_todo

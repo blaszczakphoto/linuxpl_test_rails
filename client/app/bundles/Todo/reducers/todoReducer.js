@@ -22,6 +22,8 @@ const todos = (state = [], action) => {
           completed: !t.completed,
         };
       });
+    case constants.TODOS_FETCH_TODOS_SUCCESS:
+      return action.response;
     default:
       return state;
   }

@@ -53,13 +53,17 @@ RSpec.describe 'Todos API', type: :request do
   # Test suite for POST /todos
   describe 'POST /todos' do
     # valid payload
-    let(:valid_attributes) { { text: 'Learn Elm' } }
+    let(:valid_attributes) { { text: 'Learn Elm', id: '1111-1111' } }
 
     context 'when the request is valid' do
       before { post '/api/v1/todos', params: valid_attributes }
 
       it 'creates a todo' do
         expect(json['text']).to eq('Learn Elm')
+      end
+
+      it 'creates a todo with string id' do
+        expect(json['id']).to eq('1111-1111')
       end
 
       it 'returns status code 201' do

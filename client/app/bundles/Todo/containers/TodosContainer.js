@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 });
 const mapDispatchToProps = dispatch => ({
   onClick: (text) => {
-    dispatch(actions.addTodo(text));
+    dispatch(actions.addTodoRequest(text));
   },
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);
